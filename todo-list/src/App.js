@@ -9,7 +9,8 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={WelcomeScreen} />
-        <Route path="/list" component={TODOlistScreen} />
+        <Route exact path="/list" component={TODOlistScreen} />
+        <Route exact path="/list/:id/edit" component={TODOlistScreen} />
       </Switch>
     </BrowserRouter>
   );

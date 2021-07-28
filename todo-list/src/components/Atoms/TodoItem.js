@@ -22,7 +22,7 @@ const TodoItem = (props) => {
       />
       <p>{name}</p>
       <Button color="primary">Edit</Button>
-      <Button color="secondary" onClick={() => removeTodo(id)}>Delete</Button>
+      <Button color="secondary" onClick={() => removeTodo}>Delete</Button>
     </div>
   )
 }

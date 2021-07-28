@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setCheck, removeTodos } from '../../features/todoSlice';
 
 const TodoItem = (props) => {
-  const {name, done, id, item} = props;
+  const {name, done, id } = props;
   const dispatch = useDispatch()
   const removeTodo = () => {
     dispatch(removeTodos(id))
@@ -22,7 +22,7 @@ const TodoItem = (props) => {
       />
       <p>{name}</p>
       <Button color="primary">Edit</Button>
-      <Button color="secondary" onClick={() => removeTodo()}>Delete</Button>
+      <Button color="secondary" onClick={() => removeTodo(id)}>Delete</Button>
     </div>
   )
 }

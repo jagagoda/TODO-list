@@ -22,7 +22,7 @@ const todoSlice = createSlice({
 
       let todoList = [...state.todoList];
       const itemIndex = todoList.findIndex(item => parseInt(item.id) === parseInt(id));
-      let item = {...todoList[itemIndex]};
+      let item = { ...todoList[itemIndex] };
       item.item = newName;
 
       todoList[itemIndex] = item;
@@ -35,7 +35,7 @@ const todoSlice = createSlice({
 
     setCheck: (state, action) => {
       const todoList = state.todoList.map((item) => {
-        const newItem = {...item};
+        const newItem = { ...item };
 
         if (action.payload === newItem.id) {
           if (newItem.done === true) {
